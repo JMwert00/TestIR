@@ -16,7 +16,9 @@
   <script src="https://www.puck-js.com/puck.js"></script>
   <script type="module">
     async function loadCSVFile() {
-      const response = await fetch('48,-1.csv'); // Replace 'your-csv-file.csv' with the actual filename
+      const response = await fetch('http://127.0.0.1:8080/48,-1.csv');
+      console.log(response);
+      //const response = await fetch('48,-1.csv'); // Replace 'your-csv-file.csv' with the actual filename
       const csvData = await response.text();
       return csvData;
     }
